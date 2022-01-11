@@ -1,0 +1,33 @@
+@import './vars';
+@import './mixins.scss';
+
+.card__boton{    
+    font-size: $fontSizeCatalogoProducto;//1.2rem
+    color: $colorTipograFooter;         
+    background-color:  #E4DCD8;
+    &:hover{
+        color: $colorTipograFooter;
+        font-weight: bold;
+    }
+}
+
+.card__hover:hover{  
+    transition: all 0.5s ease;
+    /*crece el card*/
+    transform: scale(1.05,1.05);
+    color: $colorTipograFooter;
+    font-weight: bold;
+  }
+
+.card__body{
+    font-size: $fontSizeCatalogoProducto;//1.2rem
+    color: $colorTipograFooter;         
+}
+    /* para pruebas */
+    /* background-color: #7ca51b;  
+    border: 1px solid #1e0db4; */
+
+// $verColorr: #E4DCD8;
+// $verColorr: #D69C79;
+// $verColorr: #E7D0C1;
+// $verColorr: #C1B0A8;

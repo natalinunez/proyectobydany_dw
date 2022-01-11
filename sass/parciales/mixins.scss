@@ -1,0 +1,27 @@
+@import './vars';
+
+@mixin widthHeight($width, $height){    
+    width: $width;
+    height: $width;
+}
+
+@mixin fontsizeColorWeight($fontSize, $colorTipografia, $fontWeight){
+    font-size: $fontSize;    
+    color: $colorTipografia;
+    font-weight: $fontWeight;  
+}
+
+// @mixin tituloParrafo($fontSize, $fontWeight, $marginBottom, $colorTipografia) {
+@mixin estiloTexto($fontSize, $fontWeight, $marginBottom, $colorTipografia) {    
+    font-size: $fontSize;    
+    font-weight: $fontWeight;
+    margin-bottom: $marginBottom;    
+    color: $colorTipografia;
+}
+
+// @mixin tituloParrafo($fontSize, $fontWeight, $marginBottom, $colorTipografia) {    
+//     font-size: $fontSize;    
+//     font-weight: $fontWeight;
+//     margin-bottom: $marginBottom;    
+//     color: $colorTipografia;
+// }

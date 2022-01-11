@@ -1,0 +1,28 @@
+/* para pruebas */
+/* para pruebas */
+.card__boton {
+  font-size: 1.2rem;
+  color: #d48c5f;
+  background-color: #E4DCD8;
+}
+.card__boton:hover {
+  color: #d48c5f;
+  font-weight: bold;
+}
+
+.card__hover:hover {
+  transition: all 0.5s ease;
+  /*crece el card*/
+  transform: scale(1.05, 1.05);
+  color: #d48c5f;
+  font-weight: bold;
+}
+
+.card__body {
+  font-size: 1.2rem;
+  color: #d48c5f;
+}
+
+/* para pruebas */
+/* background-color: #7ca51b;  
+border: 1px solid #1e0db4; */
