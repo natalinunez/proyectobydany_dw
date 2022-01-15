@@ -19,9 +19,17 @@
     color: $colorTipografia;
 }
 
-// @mixin tituloParrafo($fontSize, $fontWeight, $marginBottom, $colorTipografia) {    
-//     font-size: $fontSize;    
-//     font-weight: $fontWeight;
-//     margin-bottom: $marginBottom;    
-//     color: $colorTipografia;
-// }
+@mixin flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap) {
+    display: $display;        
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRigth;   
+    gap: $gap;    
+}
+
+@mixin grid_general($display, $gridTemplateColumns, $gridTemplateRows){
+    display: grid;    
+    grid-template-columns: repeat($gridTemplateColumns,auto);
+    grid-template-rows: repeat($gridTemplateRows,auto);
+}

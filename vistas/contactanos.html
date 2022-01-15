@@ -82,26 +82,26 @@
     <!-- Ini contenido central de pagina del formulario-->
     <!-- Ini cabecera del formulario -->
     <div class="container-fluid fondo colorTipografia">
-      <div class="container w-80 p-3 my-3">
-        <div class="row">
-          <div class="col-md-8 colorAzul ">
-            <h3 class="tituloParrafo ">
-              ¿Tienes consultas o comentarios?
-            </h3>
-            <p class="parrafo">
-              Escríbenos tus consultas o comentarios en el formulario de contacto o directamente a info@bydany.com.pe, te contestaremos muy rápido.
-            </p>
+      <div class="ContenedorCabeceraForm w-80 p-3 my-3">
+        <div class="flex_1FilaX2ColumCabe colorVerde">
+          <div class="flexHijo_1FX2C_1 colorAzul ">
+              <h3 class="tituloParrafo ">
+                ¿Tienes consultas o comentarios?
+              </h3>
+              <p class="parrafo">
+                Escríbenos tus consultas o comentarios en el formulario de contacto o directamente a info@bydany.com.pe, te contestaremos muy rápido.
+              </p>
           </div>
-          <div class="col-md-4 colorAmarrillo d-flex flex-column justify-content-around">
-            <h3  >
-              Teléfono:
-            </h3>
-            <p class="colorRojo">
-              (+34) 672418996
-            </p>
-            <p class="colorAzul">
-              Llámanos o escríbenos por Whatsapp.
-            </p>  
+          <div class="flexHijo_1FX2C_2 colorAmarrillo ">
+              <h3  >
+                Teléfono:
+              </h3>
+              <p class="">
+                (+34) 672418996
+              </p>
+              <p class="">
+                Llámanos o escríbenos por Whatsapp.
+              </p>  
           </div>
         </div>
       </div>
@@ -109,39 +109,43 @@
     <!-- Fin cabecera del formulario -->
 
     <!-- Ini formulario -->
-    <div class="container w-50 p-3 my-3 colorTipografia">            
-        <form class="row g-3">
-          <div class="col-md-12 text-center">
-            <label class="form-label  tituloParrafo">Formulario de contacto</label>            
+    <div class="container colorAzul w-50 p-3 my-3 colorTipografia">            
+        <form class="ContenedorCuerpoForm g-3">
+          <div class="text-center">
+            <label class="form-label tituloParrafo">Formulario de contacto</label>            
           </div>
-          <div class="col-md-12">
+          <div class="mb-2">
             <label class="form-label">Te queremos ayudar, envíanos tus consultas y comentarios.</label>            
           </div>
 
-          <div class="col-md-6">
-            <label for="inputNombre" class="form-label">Nombres</label>
-            <input type="text" class="form-control "  id="inputNombre">
-          </div>
-          <div class="col-md-6">
-            <label for="inputApellido" class="form-label">Apellidos</label>
-            <input type="text" class="form-control " id="inputApellido">
-          </div>
-    
-          <div class="col-md-6">
-            <label for="inputCorreo" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control "  id="inputCorreo">
-          </div>
-          <div class="col-md-6">
-            <label for="inputTelefono" class="form-label">Teléfono/Móvil</label>
-            <input type="text" class="form-control " id="inputTelefono">
+          <div class="flex_1FilaX2ColumInputForm colorVerde">
+            <div class="flex_sizeInputForm colorAmarrillo">
+              <label for="inputNombre" class="form-label">Nombres</label>
+              <input type="text" class="form-control "  id="inputNombre">
+            </div>
+            <div class="flex_sizeInputForm colorAmarrillo">
+              <label for="inputApellido" class="form-label">Apellidos</label>
+              <input type="text" class="form-control " id="inputApellido">
+            </div>  
           </div>
     
-          <div class="col-md-12">
+          <div class="flex_1FilaX2ColumInputForm">
+            <div class="flex_sizeInputForm">
+              <label for="inputCorreo" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control "  id="inputCorreo">
+            </div>
+            <div class="flex_sizeInputForm">
+              <label for="inputTelefono" class="form-label">Teléfono/Móvil</label>
+              <input type="text" class="form-control " id="inputTelefono">
+            </div>  
+          </div>
+    
+          <div class="">
             <label for="inputComentario" class="form-label">Escribe tu consulta y comentarios</label>
             <textarea class="form-control " id="inputComentario" rows="4"></textarea>
           </div>
     
-          <div class="col-md-12 ">
+          <div class="">
             <button type="submit" class="btn btnFormulario">Enviar</button>
           </div>
         </form>    

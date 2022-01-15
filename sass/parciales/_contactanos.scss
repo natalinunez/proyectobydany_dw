@@ -22,11 +22,116 @@
     border: 1px solid $colorTipograGeneral;
     color: $colorTipograGeneral;
     background-color:$colorFondo;            
-
+    margin-top: 1.5rem;
     &:hover {
         color: $colorTipograGeneral;
     }    
 }
 
+/*agregando grid y flexbox*/
+.ContenedorCabeceraForm {
+    //grid_general($display, $gridTemplateColumns, $gridTemplateRows)
+    @include grid_general(grid, 2, 1);
+    // border: solid 1px red;
+}  
+
+.flex_1FilaX2ColumCabe {
+    // border: solid 1px blue;
+    //flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap)
+    @include flex_1FilaX2Colum(flex, row, center ,5rem, 5rem, 0rem);
+}
+
+.flexHijo_1FX2C_1 {
+    //esto afecta cabeceraform
+    flex : 60rem;
+}
+
+.flexHijo_1FX2C_2 {    
+    //esto afecta cabeceraform
+    flex : 30rem;
+    //flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap)
+    @include flex_1FilaX2Colum(flex, column, center, 0rem, 0rem, 1.8rem);       
+}
+
+.ContenedorCuerpoForm {
+    //grid_general($display, $gridTemplateColumns, $gridTemplateRows)
+    @include grid_general(grid, 1, 6);   
+}
+
+.flex_1FilaX2ColumInputForm{
+    // border: solid 1px blue;    
+    //flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap)
+    @include flex_1FilaX2Colum(flex,row, center ,0rem, 0rem, 1.5rem);
+    margin-bottom: 1.5rem;    
+}
+
+.flex_sizeInputForm {
+    flex: auto;    
+}
+
+@media screen and (max-width: 768px) {
+    .flex_1FilaX2ColumCabe {        
+        //flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap)
+        @include flex_1FilaX2Colum(flex, row, center ,1.5rem, 1.5rem, 0rem);
+    }
+    
+    .flexHijo_1FX2C_1 {
+        //esto afecta cabeceraform
+        flex: 52rem;
+    }
+    
+    .flexHijo_1FX2C_2 {    
+        //esto afecta cabeceraform
+        flex : 40rem;
+        //flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap)
+        @include flex_1FilaX2Colum(flex, column, center, 0rem, 0rem, 2.55rem);            
+    }
+}
 
 
+@media screen and (max-width: 425px) {
+    .flex_1FilaX2ColumCabe {
+        //flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap)
+        @include flex_1FilaX2Colum(flex, column, center, 0rem, 0rem, 0rem);        
+        text-align: center;
+    }
+    
+    .flexHijo_1FX2C_1 {
+        //esto afecta cabeceraform
+        // flex : 60rem;
+        flex: 15.5rem;
+    }
+    
+    .flexHijo_1FX2C_2 {    
+        //esto afecta cabeceraform
+        flex : 5rem;
+        //flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap)
+        @include flex_1FilaX2Colum(flex, column, center, 0rem, 0rem, 0.5rem);    
+    }
+
+    .flex_1FilaX2ColumInputForm{
+        // border: solid 1px blue;    
+        //flex_1FilaX2Colum($display,$flexDirection, $justifyContent, $paddingLeft, $paddingRigth, $gap)
+        @include flex_1FilaX2Colum(flex, column, center ,0rem, 0rem, 1.5rem);
+        margin-bottom: 1.5rem;    
+    }    
+}
+
+/* para pruebas */
+// .colorAzul {
+//     border: 1px solid #230985;    
+// }
+
+// .colorRojo {
+//     border: 1px solid #f70c0c;
+// }
+
+// .colorAmarrillo {
+//     border: 1px solid #f1c70c;
+//     // width: 18rem;
+// }
+
+// .colorVerde {
+//     border: 1px solid green;
+//     // width: 18rem;
+// }

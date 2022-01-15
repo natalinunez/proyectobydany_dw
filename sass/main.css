@@ -322,9 +322,194 @@ h1 {
   border: 1px solid #D69C79;
   color: #D69C79;
   background-color: #f1e6df;
+  margin-top: 1.5rem;
 }
 
 .btnFormulario:hover {
   color: #D69C79;
 }
+
+/*agregando grid y flexbox*/
+.ContenedorCabeceraForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[1];
+      grid-template-rows: repeat(1, auto);
+}
+
+.flex_1FilaX2ColumCabe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  gap: 0rem;
+}
+
+.flexHijo_1FX2C_1 {
+  -webkit-box-flex: 60rem;
+      -ms-flex: 60rem;
+          flex: 60rem;
+}
+
+.flexHijo_1FX2C_2 {
+  -webkit-box-flex: 30rem;
+      -ms-flex: 30rem;
+          flex: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  gap: 1.8rem;
+}
+
+.ContenedorCuerpoForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[1];
+      grid-template-columns: repeat(1, auto);
+  -ms-grid-rows: (auto)[6];
+      grid-template-rows: repeat(6, auto);
+}
+
+.flex_1FilaX2ColumInputForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.flex_sizeInputForm {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .flex_1FilaX2ColumCabe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 0rem;
+  }
+  .flexHijo_1FX2C_1 {
+    -webkit-box-flex: 52rem;
+        -ms-flex: 52rem;
+            flex: 52rem;
+  }
+  .flexHijo_1FX2C_2 {
+    -webkit-box-flex: 40rem;
+        -ms-flex: 40rem;
+            flex: 40rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    gap: 2.55rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .flex_1FilaX2ColumCabe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    gap: 0rem;
+    text-align: center;
+  }
+  .flexHijo_1FX2C_1 {
+    -webkit-box-flex: 15.5rem;
+        -ms-flex: 15.5rem;
+            flex: 15.5rem;
+  }
+  .flexHijo_1FX2C_2 {
+    -webkit-box-flex: 5rem;
+        -ms-flex: 5rem;
+            flex: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    gap: 0.5rem;
+  }
+  .flex_1FilaX2ColumInputForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* para pruebas */
 /*# sourceMappingURL=main.css.map */
