@@ -1,6 +1,6 @@
+const urlCategorias = '../data/categorias.json';
 //este bloque de codigo es para establecer en el localStorage el valor de la categoria (1,2,3)
 //que se seleccione en la pagina principal
-
 function fCategoriaAretes(){
     // let valor = categoriaAretes.innerText.toLowerCase()
     localStorage.setItem('lscategoria',1);    
@@ -14,6 +14,28 @@ function fcategoriaCollares(){
 function fcategoriaPulseras(){
   localStorage.setItem('lscategoria',3);
 };
+
+//Ini agregado por desafio: usar ajax y jquery
+function colocarNombreCategoria(idCategoria){
+    console.log(`idCategoria=${idCategoria}`);
+    $.getJSON(urlCategorias, function(response, status) {  
+      if(status === "success"){
+        let datos = response;    
+        console.log("datos=" + datos);//no se puede visualizar datos correctamente
+        console.log(datos);
+  
+        for (const dato of datos) {
+          if (+dato.id === +idCategoria){          
+            $("#idFontsizeColorWeight").append(dato.name)
+            $("#idCategoriaEtiqueta").append(`<h3 class="estiloNombreCategoria">  ${dato.description}
+            </h3>`);
+          }
+        }  
+      }
+    
+    })    
+  }
+  //Fin agregado por desafio: usar ajax y jquery
 
 let productosCategoria, idCategoria, productos = [];
 const contenedorProducto = document.getElementById('contenedorProducto');
@@ -35,7 +57,7 @@ class Producto {
         productos.push(new Producto(4, "Argolla cristal con estrellas", 35, "aretes","../images/aretes/Argollas-cristal-con-estrellas.jpg"));  
         productos.push(new Producto(5, "argollas delgaditas", 33, "aretes","../images/aretes/Argollas-delgaditas-14mm.jpg"));
         productos.push(new Producto(6, "Argolla doble cadena", 16, "aretes","../images/aretes/Argollas-doble-cadena.jpg"));  
-        productos.push(new Producto(7, "Argolla doble", 14, "aretes","../images/aretes/Argollas-doble.jpg"));
+        // productos.push(new Producto(7, "Argolla doble", 14, "aretes","../images/aretes/Argollas-doble.jpg"));
         
         productos.push(new Producto(8, "Corazón calado plata", 30, "collares","../images/collares/cadena-corazon-calado-plata-1228x1536-1.jpg")); 
         productos.push(new Producto(9, "Perla cristal", 35, "collares","../images/collares/cadena-perla-cristal-1228x1536-1.jpg")); 
@@ -77,16 +99,20 @@ class Producto {
         let producto;
         for(producto of productosCategoria){
             etiqueta.innerHTML+=`
-                <div class="card my-3 p-2 card__hover" style="width: 18rem;">
-                    <img src="${producto.imagen}" class="card-img-top" alt="..">
-                    <div class="card-body m-auto text-center card__body">
-                        <h5 class="card-title">${producto.nombre}</h5>                                       
-                        <h3 class="mb-3">$ ${producto.precio}</h5>                            
-                    </div>                          
-                    <a id="${producto.id}" href="#" class="btn mb-3 card__boton">AGREGAR AL CARRITO</a>                
-                </div>
+                <div class="bordeAzul card_1 card__hover" >
+                    <img
+                        src="${producto.imagen}"  alt=".."    
+                        class="bordeVerde imageClass"  />
+                    <div class="bordeRojo descriptionCard">
+                        <h3 class="bordeVerde styleName">${producto.nombre}</h3>
+                        <h5 class="bordeAzul stylePrecio">$ ${producto.precio}<h5>
+                        <a id="${producto.id}" href="#" class="bordeAzul card__boton" >
+                           Ver detalles del producto
+                        </a>
+                    </div>
+                </div>    
             `
-        }
+        }        
     }    
 }
 
@@ -105,3 +131,4 @@ productoMetodos.filtrarProductosCategoria(idCategoria);
 //invocamos al metodo para renderizar en le HTML los productos por categoria
 productoMetodos.renderProducts(productosCategoria, contenedorProducto);
 
+colocarNombreCategoria(idCategoria);

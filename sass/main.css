@@ -46,8 +46,6 @@ h1, h2, h3, h4, h5, h6 {
 /* //Fin Reset CSS */
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡       HEADER   ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡*/
 /* Inicio cabecera */
-/* border: 1px solid #D69C79; */
-/* background-color: #E4DCD8;    */
 /* para pruebas */
 /* para pruebas */
 .nav__estilo {
@@ -79,22 +77,9 @@ h1 {
   height: 7rem;
   -webkit-animation: animaImg 5s ease 0s infinite;
           animation: animaImg 5s ease 0s infinite;
-  /* para pruebas */
-  /* background-color: #7ca51b;  
-    border: 1px solid #1e0db4; */
 }
 
-.header__compras {
-  width: 6rem;
-  height: 6rem;
-  color: #D69C79;
-  -webkit-animation: animaImg 5s ease 0s infinite;
-          animation: animaImg 5s ease 0s infinite;
-  /* para pruebas */
-  /* background-color: #51cd32;  
-    border: 1px solid #1e0db4; */
-}
-
+/* para pruebas */
 /*Animacion para logo e imagen de compras*/
 @-webkit-keyframes animaImg {
   0% {
@@ -143,17 +128,27 @@ h1 {
 }
 
 .carouselItem__titulo {
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #af6a3f;
+  color: #f1e7e7;
+}
+
+.carouselItem__titulo_1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #D69C79;
+  text-align: center;
+  background-color: #f1e6df;
+  padding-top: 0.8rem;
 }
 
 .carouselItem__parrafo {
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   font-weight: none;
-  margin-bottom: 3rem;
-  color: #af6a3f;
+  margin-bottom: 0.5rem;
+  color: #f1e7e7;
 }
 
 /* fin carrusel */
@@ -167,6 +162,23 @@ h1 {
   /*crece el card*/
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
+}
+
+.contenedorTipoCate {
+  position: relative;
+  /* display: inline-block; */
+  text-align: center;
+}
+
+.centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #af6a3f;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 /* para pruebas */
@@ -237,8 +249,12 @@ h1 {
 /* para pruebas */
 .card__boton {
   font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
   color: #d48c5f;
   background-color: #E4DCD8;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .card__boton:hover {
@@ -252,18 +268,210 @@ h1 {
   /*crece el card*/
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
-  color: #d48c5f;
-  font-weight: bold;
+  background-color: #f7ebe5;
 }
 
-.card__body {
+.stylePrecio {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.styleName {
   font-size: 1.2rem;
-  color: #d48c5f;
+}
+
+.estiloNombreCategoria {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #D69C79;
+  text-align: center;
+}
+
+.fontsizeColorWeight {
+  font-size: 1.5rem;
+  color: #D69C79 !important;
+  font-weight: none;
+}
+
+.styleFranja {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #D69C79;
+  text-align: center;
+  background-color: #f1e6df;
+  padding-top: 1rem;
+}
+
+.containerCards {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  width: 70vw;
+}
+
+.card_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  gap: 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #dfdad7;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  margin-left: 4.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.imageClass {
+  width: 18rem;
+  height: 22rem;
+  border-radius: 0.5rem;
+}
+
+.descriptionCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.8rem;
+}
+
+.styleMapa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 0rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .containerCards {
+    width: 70vw;
+  }
+  .card_1 {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .containerCards {
+    -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    width: 90vw;
+  }
+  .card_1 {
+    margin-left: 1rem;
+  }
+  .imageClass {
+    width: 16rem;
+    height: 19rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerCards {
+    -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    width: 80vw;
+  }
+  .card_1 {
+    margin-left: 1rem;
+  }
+  .stylePrecio {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .styleName {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .containerCards {
+    -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    width: 80vw;
+  }
+  .card_1 {
+    margin-left: 0rem;
+  }
+  .stylePrecio {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .styleName {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .containerCards {
+    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    width: 90vw;
+  }
+  .card_1 {
+    margin-left: 0rem;
+  }
+  .stylePrecio {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .styleName {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .containerCards {
+    -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    width: 80vw;
+  }
+  .card_1 {
+    margin-left: 0rem;
+  }
+  .stylePrecio {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .styleName {
+    font-size: 1rem;
+  }
 }
 
 /* para pruebas */
-/* background-color: #7ca51b;  
-    border: 1px solid #1e0db4; */
 /* para pruebas */
 /* para pruebas */
 .sectionWe__title {

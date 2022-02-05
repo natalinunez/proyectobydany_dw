@@ -54,7 +54,7 @@
           <span class="navbar-toggler-icon estilo__Hambur claseBorderRojo"></span>
         </button>
 
-        <div class="collapse navbar-collapse claseBorderAzul justify-content-center"
+        <div class="collapse navbar-collapse claseBorderAzul justify-content-end"
           id="navbarNav">
           <ul class="navbar-nav align-items-center claseBorderRosado">
             <li class="nav-item">
@@ -71,19 +71,32 @@
             </li>
           </ul>
         </div>
-
-        <a class="navbar-brand claseBorderRojo" href="#">
-          <img src="../images/shopping-bag.svg" alt="logo compras" class="header__compras"/>
-        </a>
       </div>
     </nav>
     <!-- Fin barra de navegacion -->
 
     <!-- Ini catalogo collares -->
-    <div class="container my-5" >
-      <div class="container d-flex justify-content-around row m-auto my-5" id="contenedorProducto">
+    <div class="container-fluid ">
+      <div class="row styleFranja">
+          <div col="col-md-12 " id="idCategoriaEtiqueta">
+          </div>
       </div>
-    </div>
+    </div>        
+
+    <div class="container-fluid my-5 bordeVerde " >
+      <div class="container ms-5 mb-3 bordeRojo " >
+        <ul class="styleMapa bordeAzul">
+          <li>
+            <a class="fontsizeColorWeight"  href="../index.html">Inicio ></a>
+          </li>
+          <li class="fontsizeColorWeight" id="idFontsizeColorWeight">            
+          </li>
+        </ul>        
+      </div>
+       
+      <div class="containerCards bordeRojo" id="contenedorProducto">        
+      </div>      
+    </div>        
     <!-- Fin catalogo collares -->    
     
     <!-- Ini footer -->
@@ -149,6 +162,9 @@
       </div>
     </div>
     <!-- Fin footer -->
+
+    <!--Jquery 3.6-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>        
 
     <!--Bootstrap -->
     <script

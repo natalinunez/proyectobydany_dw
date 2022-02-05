@@ -1,11 +1,5 @@
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡       HEADER   ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡*/
 /* Inicio cabecera */
-//por probar colocar color a la hamburguesa
-// .estilo__Hambur {
-//     color: #D69C79!important;
-    /* border: 1px solid #D69C79; */
-    /* background-color: #E4DCD8;    */
-//   }  
 @import './vars';
 @import './mixins.scss';
   .nav__estilo {    
@@ -30,21 +24,25 @@
     border: 1px solid $colorTipograGeneral;
     @include widthHeight(7rem,7rem);
     animation: animaImg 5s ease 0s infinite;
-    /* para pruebas */
-    /* background-color: #7ca51b;  
-    border: 1px solid #1e0db4; */
   }
   
-  .header__compras{    
-    @include widthHeight(6rem,6rem);
-    color: $colorTipograGeneral; 
+  /* para pruebas */
+// .bordeAzul {
+//     border: 2px solid #230985;    
+// }
 
-    animation: animaImg 5s ease 0s infinite;
-    /* para pruebas */
-    /* background-color: #51cd32;  
-    border: 1px solid #1e0db4; */
-  }
-  
+// .bordeRojo {
+//     border: 2px solid #f70c0c;
+// }
+
+// .bordeAmarrillo {
+//     border: 2px solid #f1c70c;
+// }
+
+// .bordeVerde {
+//     border: 2px solid #3af10c;
+// }
+
   /*Animacion para logo e imagen de compras*/
   @keyframes animaImg {
     0% {

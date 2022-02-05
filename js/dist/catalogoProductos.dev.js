@@ -6,8 +6,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-//este bloque de codigo es para establecer en el localStorage el valor de la categoria (1,2,3)
+var urlCategorias = '../data/categorias.json'; //este bloque de codigo es para establecer en el localStorage el valor de la categoria (1,2,3)
 //que se seleccione en la pagina principal
+
 function fCategoriaAretes() {
   // let valor = categoriaAretes.innerText.toLowerCase()
   localStorage.setItem('lscategoria', 1);
@@ -26,7 +27,48 @@ function fcategoriaPulseras() {
   localStorage.setItem('lscategoria', 3);
 }
 
-;
+; //Ini agregado por desafio: usar ajax y jquery
+
+function colocarNombreCategoria(idCategoria) {
+  console.log("idCategoria=".concat(idCategoria));
+  $.getJSON(urlCategorias, function (response, status) {
+    if (status === "success") {
+      var datos = response;
+      console.log("datos=" + datos); //no se puede visualizar datos correctamente
+
+      console.log(datos);
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = datos[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var dato = _step.value;
+
+          if (+dato.id === +idCategoria) {
+            $("#idFontsizeColorWeight").append(dato.name);
+            $("#idCategoriaEtiqueta").append("<h3 class=\"estiloNombreCategoria\">  ".concat(dato.description, "\n            </h3>"));
+          }
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+            _iterator["return"]();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+    }
+  });
+} //Fin agregado por desafio: usar ajax y jquery
+
+
 var productosCategoria,
     idCategoria,
     productos = [];
@@ -53,8 +95,8 @@ function () {
       productos.push(new Producto(3, "Argollas chispas colgantes", 25, "aretes", "../images/aretes/Argollas-chispa-colgante.jpg"));
       productos.push(new Producto(4, "Argolla cristal con estrellas", 35, "aretes", "../images/aretes/Argollas-cristal-con-estrellas.jpg"));
       productos.push(new Producto(5, "argollas delgaditas", 33, "aretes", "../images/aretes/Argollas-delgaditas-14mm.jpg"));
-      productos.push(new Producto(6, "Argolla doble cadena", 16, "aretes", "../images/aretes/Argollas-doble-cadena.jpg"));
-      productos.push(new Producto(7, "Argolla doble", 14, "aretes", "../images/aretes/Argollas-doble.jpg"));
+      productos.push(new Producto(6, "Argolla doble cadena", 16, "aretes", "../images/aretes/Argollas-doble-cadena.jpg")); // productos.push(new Producto(7, "Argolla doble", 14, "aretes","../images/aretes/Argollas-doble.jpg"));
+
       productos.push(new Producto(8, "Corazón calado plata", 30, "collares", "../images/collares/cadena-corazon-calado-plata-1228x1536-1.jpg"));
       productos.push(new Producto(9, "Perla cristal", 35, "collares", "../images/collares/cadena-perla-cristal-1228x1536-1.jpg"));
       productos.push(new Producto(10, "Trinity tree", 35, "collares", "../images/collares/cadena-trinity-1229x1536-1.jpg"));
@@ -101,26 +143,26 @@ function () {
     value: function renderProducts(productosCategoria, etiqueta) {
       etiqueta.innerHTML = "";
       var producto;
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
+      var _iteratorNormalCompletion2 = true;
+      var _didIteratorError2 = false;
+      var _iteratorError2 = undefined;
 
       try {
-        for (var _iterator = productosCategoria[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          producto = _step.value;
-          etiqueta.innerHTML += "\n                <div class=\"card my-3 p-2 card__hover\" style=\"width: 18rem;\">\n                    <img src=\"".concat(producto.imagen, "\" class=\"card-img-top\" alt=\"..\">\n                    <div class=\"card-body m-auto text-center card__body\">\n                        <h5 class=\"card-title\">").concat(producto.nombre, "</h5>                                       \n                        <h3 class=\"mb-3\">$ ").concat(producto.precio, "</h5>                            \n                    </div>                          \n                    <a id=\"").concat(producto.id, "\" href=\"#\" class=\"btn mb-3 card__boton\">AGREGAR AL CARRITO</a>                \n                </div>\n            ");
+        for (var _iterator2 = productosCategoria[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          producto = _step2.value;
+          etiqueta.innerHTML += "\n                <div class=\"bordeAzul card_1 card__hover\" >\n                    <img\n                        src=\"".concat(producto.imagen, "\"  alt=\"..\"    \n                        class=\"bordeVerde imageClass\"  />\n                    <div class=\"bordeRojo descriptionCard\">\n                        <h3 class=\"bordeVerde styleName\">").concat(producto.nombre, "</h3>\n                        <h5 class=\"bordeAzul stylePrecio\">$ ").concat(producto.precio, "<h5>\n                        <a id=\"").concat(producto.id, "\" href=\"#\" class=\"bordeAzul card__boton\" >\n                           Ver detalles del producto\n                        </a>\n                    </div>\n                </div>    \n            ");
         }
       } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
+        _didIteratorError2 = true;
+        _iteratorError2 = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-            _iterator["return"]();
+          if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+            _iterator2["return"]();
           }
         } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
+          if (_didIteratorError2) {
+            throw _iteratorError2;
           }
         }
       }
@@ -140,3 +182,4 @@ idCategoria = +localStorage.getItem('lscategoria'); //filtramos los productos po
 productoMetodos.filtrarProductosCategoria(idCategoria); //invocamos al metodo para renderizar en le HTML los productos por categoria
 
 productoMetodos.renderProducts(productosCategoria, contenedorProducto);
+colocarNombreCategoria(idCategoria);

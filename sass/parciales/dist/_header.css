@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /*¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡       HEADER   ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡*/
 /* Inicio cabecera */
-/* border: 1px solid #D69C79; */
-/* background-color: #E4DCD8;    */
 /* para pruebas */
 /* para pruebas */
 .nav__estilo {
@@ -31,21 +29,9 @@ h1 {
   width: 7rem;
   height: 7rem;
   animation: animaImg 5s ease 0s infinite;
-  /* para pruebas */
-  /* background-color: #7ca51b;  
-  border: 1px solid #1e0db4; */
 }
 
-.header__compras {
-  width: 6rem;
-  height: 6rem;
-  color: #D69C79;
-  animation: animaImg 5s ease 0s infinite;
-  /* para pruebas */
-  /* background-color: #51cd32;  
-  border: 1px solid #1e0db4; */
-}
-
+/* para pruebas */
 /*Animacion para logo e imagen de compras*/
 @keyframes animaImg {
   0% {
